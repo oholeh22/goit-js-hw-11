@@ -22,10 +22,27 @@ document.getElementById('search-form').addEventListener('submit', function(event
   
     fetchImages(searchInput)
       .then(images => {
+        if (images.length === 0) {
+            iziToast.warning({
+                title: 'No results',
+                message: 'Sorry, there are no images matching your search query. Please try again!',
+                position: 'topRight',
+                timeout: 5000,
+            });
+            return;
+        }
         renderImages(images, galleryList);
         lightbox.refresh(); 
       })
-      .catch(error => console.error('Error fetching images:', error));
+      .catch(error => {
+        console.error('Error fetching images:', error);
+        iziToast.error({
+            title: 'Error',
+            message: 'An error occurred while fetching images. Please try again later.',
+            position: 'topRight',
+            timeout: 5000,
+        });
+      });
 });
 
 
