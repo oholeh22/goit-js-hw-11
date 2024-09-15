@@ -16,7 +16,6 @@ export function renderImages(images, galleryElement) {
             <img src="${image.webformatURL}" alt="${image.tags}" />
           </a>
           <div class="gallery-item-info">
-            <p class="tags">${image.tags}</p>
             <p class="stats">Likes: ${image.likes}</p>
             <p class="stats">Views: ${image.views}</p>
             <p class="stats">Comments: ${image.comments}</p>
