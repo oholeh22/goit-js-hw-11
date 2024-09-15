@@ -4,12 +4,11 @@ import{S as c,i as a}from"./assets/vendor-5ObWk2rO.js";(function(){const s=docum
             <img src="${e.webformatURL}" alt="${e.tags}" />
           </a>
           <div class="gallery-item-info">
-            <p class="tags">${e.tags}</p>
             <p class="stats">Likes: ${e.likes}</p>
             <p class="stats">Views: ${e.views}</p>
             <p class="stats">Comments: ${e.comments}</p>
             <p class="stats">Downloads: ${e.downloads}</p>
           </div>
         </li>
-      `).join("");console.log("Markup:",n),s.insertAdjacentHTML("beforeend",n)}function f(o){o.innerHTML=""}let p=new c(".gallery-list a",{});document.getElementById("search-form").addEventListener("submit",function(o){o.preventDefault();const s=document.getElementById("search-input").value.trim();if(!s){a.error({message:"Please enter a search word."});return}const n=document.getElementById("gallery");f(n),l(s).then(e=>{if(e.length===0){a.warning({title:"No results",message:"Sorry, there are no images matching your search query. Please try again!",position:"topRight",timeout:5e3});return}u(e,n),p.refresh()}).catch(e=>{console.error("Error fetching images:",e),a.error({title:"Error",message:"An error occurred while fetching images. Please try again later.",position:"topRight",timeout:5e3})})});
+      `).join("");console.log("Markup:",n),s.insertAdjacentHTML("beforeend",n)}function f(o){o.innerHTML=""}let m=new c(".gallery-list a",{});document.getElementById("search-form").addEventListener("submit",function(o){o.preventDefault();const s=document.getElementById("search-input").value.trim();if(!s){a.error({message:"Please enter a search word."});return}const n=document.getElementById("gallery");f(n),l(s).then(e=>{if(e.length===0){a.warning({title:"No results",message:"Sorry, there are no images matching your search query. Please try again!",position:"topRight",timeout:5e3});return}u(e,n),m.refresh()}).catch(e=>{console.error("Error fetching images:",e),a.error({title:"Error",message:"An error occurred while fetching images. Please try again later.",position:"topRight",timeout:5e3})})});
 //# sourceMappingURL=index.js.map
