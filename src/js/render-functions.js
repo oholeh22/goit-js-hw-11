@@ -13,13 +13,13 @@ export function renderImages(images, galleryElement) {
       return `
         <li class="gallery-item">
           <a href="${image.largeImageURL}">
-            <img src="${image.webformatURL}" alt="${image.tags}" />
+            <img src="${image.webformatURL}" alt="${image.tags}" width="360" height="152" />
           </a>
           <div class="gallery-item-info">
-            <p class="stats">Likes: ${image.likes}</p>
-            <p class="stats">Views: ${image.views}</p>
-            <p class="stats">Comments: ${image.comments}</p>
-            <p class="stats">Downloads: ${image.downloads}</p>
+            <p class="stats"><b>Likes</b> ${image.likes}</p>
+            <p class="stats"><b>Views</b> ${image.views}</p>
+            <p class="stats"><b>Comments</b> ${image.comments}</p>
+            <p class="stats"><b>Downloads</b> ${image.downloads}</p>
           </div>
         </li>
       `;

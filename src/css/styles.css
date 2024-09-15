@@ -137,9 +137,18 @@ button:focus {
 }
 
 .gallery-item-info p {
-  margin: 0;
-  font-size: 14px;
-  font-weight: bold;
+  display: flex;
+    font-size: 12px;
+    line-height: 2;
+    letter-spacing: 0.04em;
+    color: rgb(46, 47, 66);
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.gallery-item-info b {
+  font-size: bold;
 }
 
 
